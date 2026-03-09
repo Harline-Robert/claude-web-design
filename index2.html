@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proverbs 31 – The Virtuous Woman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:    { DEFAULT: '#c9a84c', light: '#f0d080', dark: '#8b6914' },
+            rose:    { soft: '#f8e8e8', deep: '#b5485a' },
+            parchment: '#fdf6ec',
+            ink:     '#2c1a0e',
+          },
+          fontFamily: {
+            serif:  ['"Georgia"', 'serif'],
+            sans:   ['"Segoe UI"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #fdf6ec; color: #2c1a0e; font-family: "Segoe UI", sans-serif; }
+
+    /* ── decorative divider ── */
+    .divider {
+      display: flex; align-items: center; gap: 1rem; margin: 3rem 0;
+    }
+    .divider::before, .divider::after {
+      content: ''; flex: 1; height: 1px; background: linear-gradient(to right, transparent, #c9a84c, transparent);
+    }
+    .divider span { color: #c9a84c; font-size: 1.5rem; }
+
+    /* ── hero gradient ── */
+    .hero-bg {
+      background: linear-gradient(135deg, #3b1a08 0%, #6b2d18 40%, #8b1a3a 100%);
+    }
+
+    /* ── verse quote ── */
+    .verse-card {
+      border-left: 4px solid #c9a84c;
+      background: linear-gradient(to right, #fff8ee, #fdf6ec);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    /* ── characteristic card hover ── */
+    .char-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .char-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.15); }
+
+    /* ── story section ── */
+    .story-bg {
+      background: linear-gradient(135deg, #fff8ee 0%, #fdf0d8 100%);
+    }
+
+    /* ── scroll reveal (pure CSS fade-in) ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.8s ease both; }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.30s; }
+    .delay-3 { animation-delay: 0.45s; }
+    .delay-4 { animation-delay: 0.60s; }
+
+    /* ── roles badge ── */
+    .role-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: linear-gradient(135deg, #c9a84c, #f0d080);
+      color: #2c1a0e; font-weight: 700; padding: 0.4rem 1rem;
+      border-radius: 9999px; font-size: 0.85rem; letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<header class="hero-bg text-white">
+  <div class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <p class="text-gold-light text-sm font-semibold tracking-widest uppercase mb-3 fade-up">A Biblical Portrait</p>
+    <h1 class="text-5xl md:text-6xl font-serif font-bold leading-tight mb-4 fade-up delay-1">
+      Proverbs 31
+    </h1>
+    <p class="text-2xl md:text-3xl font-serif italic text-gold-light mb-6 fade-up delay-2">
+      "The Virtuous Woman"
+    </p>
+    <p class="text-base md:text-lg max-w-2xl mx-auto text-gray-300 fade-up delay-3">
+      A timeless portrait of strength, wisdom, grace, and godly character —<br>
+      a celebration of women in every season and role of life.
+    </p>
+    <!-- scroll cue -->
+    <div class="mt-10 fade-up delay-4">
+      <svg class="mx-auto w-8 h-8 text-gold animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════════
+     PASSAGE OVERVIEW
+════════════════════════════════════════════ -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-serif font-bold text-ink mb-2">The Passage</h2>
+    <p class="text-gray-500">Proverbs 31:10–31 (NIV)</p>
+  </div>
+
+  <div class="verse-card mb-8">
+    <p class="italic text-lg leading-relaxed text-ink">
+      <span class="font-bold not-italic text-gold-dark">v.10 —</span>
+      "A wife of noble character who can find? She is worth far more than rubies."
+    </p>
+  </div>
+  <div class="verse-card mb-8">
+    <p class="italic text-lg leading-relaxed text-ink">
+      <span class="font-bold not-italic text-gold-dark">v.25 —</span>
+      "She is clothed with strength and dignity; she can laugh at the days to come."
+    </p>
+  </div>
+  <div class="verse-card mb-8">
+    <p class="italic text-lg leading-relaxed text-ink">
+      <span class="font-bold not-italic text-gold-dark">v.26 —</span>
+      "She speaks with wisdom, and faithful instruction is on her tongue."
+    </p>
+  </div>
+  <div class="verse-card">
+    <p class="italic text-lg leading-relaxed text-ink">
+      <span class="font-bold not-italic text-gold-dark">v.30 —</span>
+      "Charm is deceptive, and beauty is fleeting; but a woman who fears the Lord is to be praised."
+    </p>
+  </div>
+
+  <p class="mt-8 text-gray-600 leading-relaxed text-base text-center max-w-3xl mx-auto">
+    Written as an acrostic poem in Hebrew — each verse beginning with a successive letter of the
+    alphabet — Proverbs 31 is a poetic celebration of a godly woman whose life radiates virtue in
+    every dimension: family, work, community, and faith.
+  </p>
+</section>
+
+<div class="divider max-w-5xl mx-auto px-6"><span>✦</span></div>
+
+<!-- ════════════════════════════════════════════
+     CHARACTERISTICS GRID
+════════════════════════════════════════════ -->
+<section class="max-w-5xl mx-auto px-6 pb-16">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-serif font-bold text-ink mb-2">Her Characteristics</h2>
+    <p class="text-gray-500">Ten defining qualities of the Proverbs 31 woman</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- 1 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/8b1a3a/ffffff?text=Trustworthy+%26+Loyal"
+           alt="Trustworthy and Loyal" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.11–12</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Trustworthy &amp; Loyal</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Her husband trusts her completely. She brings him good, not harm, all the days of her life.
+          Faithfulness is the bedrock of her character.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/3b1a08/ffffff?text=Diligent+%26+Industrious"
+           alt="Diligent and Industrious" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.13–19</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Diligent &amp; Industrious</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          She works with eager hands — selecting wool and flax, bringing food from afar, rising before
+          dawn, and managing her household with skill and energy.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/6b2d18/ffffff?text=Generous+%26+Compassionate"
+           alt="Generous and Compassionate" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.20</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Generous &amp; Compassionate</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          She opens her arms to the poor and extends her hands to the needy. Her generosity flows
+          from a heart of genuine compassion.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/c9a84c/2c1a0e?text=Wise+Provider"
+           alt="Wise Provider" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.14–15</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Wise Provider</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Like merchant ships, she brings food from afar and provides portions for her household and
+          servants — a nurturing steward of every resource.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/1a3a6b/ffffff?text=Entrepreneurial+%26+Bold"
+           alt="Entrepreneurial" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.16–18</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Entrepreneurial &amp; Bold</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          She considers a field and buys it; out of her earnings she plants a vineyard. Her lamp does
+          not go out at night. She is a woman of initiative and vision.
+        </p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/2a6b3a/ffffff?text=Dignified+%26+Strong"
+           alt="Dignified and Strong" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.25</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Dignified &amp; Strong</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Clothed with strength and dignity, she faces the future with joy and confidence —
+          never fear. Her inner strength is her most beautiful garment.
+        </p>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/4a1a6b/ffffff?text=Wise+in+Speech"
+           alt="Wise in Speech" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.26</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Wise in Speech</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          She speaks with wisdom and faithful instruction is on her tongue. Her words build up,
+          guide, and heal — never tear down or destroy.
+        </p>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/6b3a1a/ffffff?text=Devoted+Mother"
+           alt="Devoted Mother" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.27–28</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">Devoted Mother</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          She watches over the affairs of her household. Her children arise and call her blessed.
+          Her love and presence are the anchor of the family.
+        </p>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="char-card bg-white rounded-2xl shadow-md overflow-hidden">
+      <img src="https://placehold.co/600x320/1a4a6b/ffffff?text=God-Fearing+Heart"
+           alt="God-Fearing" class="w-full h-44 object-cover" />
+      <div class="p-5">
+        <span class="text-xs font-bold tracking-widest text-gold uppercase">v.30</span>
+        <h3 class="text-xl font-serif font-bold mt-1 mb-2 text-ink">God-Fearing Heart</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Charm is deceptive, beauty fleeting — but a woman who fears the Lord is to be praised.
+          Her greatest beauty is her devotion to God.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider max-w-5xl mx-auto px-6"><span>✦</span></div>
+
+<!-- ════════════════════════════════════════════
+     STORY SECTION
+════════════════════════════════════════════ -->
+<section class="story-bg py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <span class="role-badge mb-4 inline-flex">A Story</span>
+      <h2 class="text-3xl font-serif font-bold text-ink mt-3 mb-2">The Woman of the Valley</h2>
+      <p class="text-gray-500 italic">A narrative inspired by Proverbs 31</p>
+    </div>
+
+    <img src="https://placehold.co/900x380/6b2d18/f0d080?text=A+Woman+of+Noble+Character"
+         alt="Story illustration" class="w-full rounded-2xl shadow-lg mb-10 object-cover h-64" />
+
+    <div class="prose max-w-none text-ink text-base leading-relaxed space-y-6">
+
+      <p>
+        <span class="font-serif text-4xl font-bold text-gold float-left mr-2 leading-none">L</span>
+        eah rose before the sun each morning. In the quiet valley town of Shiloh, when the world
+        still lay draped in silver mist, her lamp was already burning. It was not burden that woke
+        her — it was purpose. She had learned long ago that a life poured out for others is the
+        fullest life of all.
+      </p>
+
+      <p>
+        Her husband Caleb trusted her with everything — the household accounts, the negotiations at
+        the market, the care of their three children. Not because she was perfect, but because she
+        was faithful. <em>"She brings him good, not harm,"</em> the village elders would say when
+        they saw them together, and they meant every word.
+      </p>
+
+      <p>
+        Leah's hands were never idle. She spun wool into garments, traded at the city gates,
+        tended a small vineyard she had purchased with her own savings, and still found time to
+        carry warm bread to the widow at the end of the lane every Thursday morning. Her generosity
+        was not loud — it was quiet, consistent, and rooted in a heart that genuinely loved people.
+      </p>
+
+      <p>
+        There were hard seasons. A drought one year. A sickness that swept through the children's
+        rooms. A business deal that failed. But Leah faced each difficulty clothed in what the
+        ancients called <em>strength and dignity</em>. She did not crumble. She gathered her family
+        close, prayed through the night, and by morning had a plan.
+      </p>
+
+      <p>
+        Her daughter Miriam watched her mother with wide eyes. She noticed how her mother's words
+        were always careful — building bridges, never walls. She saw how her mother spoke to
+        servants with the same respect she gave to town elders. She watched her mother kneel in
+        prayer every evening, and she understood, even as a girl, that the source of her mother's
+        strength was not within herself — it flowed from somewhere deeper, from the God she feared
+        and loved.
+      </p>
+
+      <p>
+        One evening, as Leah tucked Miriam in, the girl asked: "Mama, what do you want to be
+        remembered for?" Leah smiled and smoothed back her daughter's hair. <em>"Not for how I
+        looked,"</em> she said softly, <em>"not for what I owned — but for whether the people
+        around me were better, warmer, and more loved because I passed through their lives."</em>
+      </p>
+
+      <p>
+        Years later, when her children gathered to honor her, they did not mention her beauty or
+        her wealth. They stood and called her <strong>blessed</strong> — because she had shown them
+        what it looks like to live a life of substance, of faith, and of love that never gives up.
+      </p>
+
+      <div class="verse-card mt-8">
+        <p class="italic text-lg text-ink">
+          "Her children arise and call her blessed; her husband also, and he praises her:
+          'Many women do noble things, but you surpass them all.'"
+          <span class="block mt-2 text-sm font-bold not-italic text-gold-dark">— Proverbs 31:28–29</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider max-w-5xl mx-auto px-6"><span>✦</span></div>
+
+<!-- ════════════════════════════════════════════
+     ROLES OF WOMEN
+════════════════════════════════════════════ -->
+<section class="max-w-5xl mx-auto px-6 pb-16">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-serif font-bold text-ink mb-2">Women in Every Role</h2>
+    <p class="text-gray-500 max-w-2xl mx-auto">
+      Scripture honours women not as a single archetype, but in their beautiful diversity —
+      as mothers, daughters, leaders, friends, and warriors of faith.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center border-t-4 border-gold">
+      <div class="w-16 h-16 rounded-full bg-rose-soft flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-rose-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-serif font-bold text-ink mb-2">Mother</h3>
+      <p class="text-sm text-gray-600 leading-relaxed mb-4">
+        The first teacher, the deepest comfort. A mother's love reflects God's own tenderness
+        toward His children — patient, unconditional, and fierce in its protection.
+      </p>
+      <div class="verse-card text-left text-sm">
+        <em>"As a mother comforts her child, so will I comfort you."</em>
+        <span class="block mt-1 font-bold text-gold-dark text-xs">Isaiah 66:13</span>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center border-t-4 border-gold">
+      <div class="w-16 h-16 rounded-full bg-rose-soft flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-rose-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-serif font-bold text-ink mb-2">Daughter</h3>
+      <p class="text-sm text-gray-600 leading-relaxed mb-4">
+        Full of potential and promise. Scripture speaks of daughters as heirs, warriors, and
+        co-builders of legacy — never lesser, never secondary.
+      </p>
+      <div class="verse-card text-left text-sm">
+        <em>"She is more precious than rubies; nothing you desire can compare with her."</em>
+        <span class="block mt-1 font-bold text-gold-dark text-xs">Proverbs 3:15</span>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-md p-6 text-center border-t-4 border-gold">
+      <div class="w-16 h-16 rounded-full bg-rose-soft flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8 text-rose-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-serif font-bold text-ink mb-2">Leader &amp; Servant</h3>
+      <p class="text-sm text-gray-600 leading-relaxed mb-4">
+        Women have led nations (Deborah), saved peoples (Esther), and anointed kings. Their
+        leadership is marked by courage, wisdom, and sacrificial love.
+      </p>
+      <div class="verse-card text-left text-sm">
+        <em>"Deborah, a prophet, the wife of Lappidoth, was leading Israel at that time."</em>
+        <span class="block mt-1 font-bold text-gold-dark text-xs">Judges 4:4</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider max-w-5xl mx-auto px-6"><span>✦</span></div>
+
+<!-- ════════════════════════════════════════════
+     ADDITIONAL BIBLE VERSES ABOUT WOMEN
+════════════════════════════════════════════ -->
+<section class="max-w-5xl mx-auto px-6 pb-16">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-serif font-bold text-ink mb-2">What Scripture Says About Women</h2>
+    <p class="text-gray-500 max-w-2xl mx-auto">
+      From Genesis to Revelation, the Bible affirms the dignity, strength, and irreplaceable
+      value of every woman.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            There is neither Jew nor Gentile, neither slave nor free, nor is there male and female,
+            for you are all one in Christ Jesus.
+          </p>
+          <span class="role-badge text-xs">Galatians 3:28</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            Honor your father and your mother, so that you may live long in the land the Lord
+            your God is giving you.
+          </p>
+          <span class="role-badge text-xs">Exodus 20:12</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            Strength and dignity are her clothing, and she laughs at the time to come. She opens
+            her mouth with wisdom, and the teaching of kindness is on her tongue.
+          </p>
+          <span class="role-badge text-xs">Proverbs 31:25–26</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            For I know the plans I have for you, declares the Lord, plans for welfare and not for
+            evil, to give you a future and a hope.
+          </p>
+          <span class="role-badge text-xs">Jeremiah 29:11</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            She gave this name to the Lord who spoke to her: "You are the God who sees me,"
+            for she said, "I have now seen the One who sees me."
+          </p>
+          <span class="role-badge text-xs">Genesis 16:13 — Hagar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            "Do not urge me to leave you or to return from following you. For where you go I will
+            go, and where you lodge I will lodge. Your people shall be my people, and your God
+            my God."
+          </p>
+          <span class="role-badge text-xs">Ruth 1:16 — Ruth</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            And who knows whether you have not come to the kingdom for such a time as this?
+          </p>
+          <span class="role-badge text-xs">Esther 4:14 — Esther</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow p-6">
+      <div class="flex items-start gap-4">
+        <div class="text-4xl font-serif font-bold text-gold opacity-40">"</div>
+        <div>
+          <p class="italic text-ink leading-relaxed mb-3">
+            Blessed are you among women, and blessed is the fruit of your womb!
+          </p>
+          <span class="role-badge text-xs">Luke 1:42 — Mary</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     WOMEN WHO SHAPED HISTORY (Bible)
+════════════════════════════════════════════ -->
+<section class="bg-ink text-white py-16">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-serif font-bold text-gold-light mb-2">Women Who Shaped History</h2>
+      <p class="text-gray-400">Remarkable women of the Bible whose courage changed the world</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+
+      <div class="text-center">
+        <div class="w-20 h-20 rounded-full mx-auto mb-3 overflow-hidden">
+          <img src="https://placehold.co/80x80/8b1a3a/f0d080?text=E" alt="Esther" class="w-full h-full object-cover" />
+        </div>
+        <p class="font-bold text-gold text-sm">Esther</p>
+        <p class="text-xs text-gray-400 mt-1">Saved a nation through courage and prayer</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 rounded-full mx-auto mb-3 overflow-hidden">
+          <img src="https://placehold.co/80x80/3b1a08/f0d080?text=R" alt="Ruth" class="w-full h-full object-cover" />
+        </div>
+        <p class="font-bold text-gold text-sm">Ruth</p>
+        <p class="text-xs text-gray-400 mt-1">Loyalty and love across borders</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 rounded-full mx-auto mb-3 overflow-hidden">
+          <img src="https://placehold.co/80x80/1a3a6b/f0d080?text=D" alt="Deborah" class="w-full h-full object-cover" />
+        </div>
+        <p class="font-bold text-gold text-sm">Deborah</p>
+        <p class="text-xs text-gray-400 mt-1">Judge and prophetess who led armies</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 rounded-full mx-auto mb-3 overflow-hidden">
+          <img src="https://placehold.co/80x80/2a6b3a/f0d080?text=M" alt="Mary" class="w-full h-full object-cover" />
+        </div>
+        <p class="font-bold text-gold text-sm">Mary</p>
+        <p class="text-xs text-gray-400 mt-1">Mother of Christ; vessel of grace</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 rounded-full mx-auto mb-3 overflow-hidden">
+          <img src="https://placehold.co/80x80/6b3a1a/f0d080?text=H" alt="Hannah" class="w-full h-full object-cover" />
+        </div>
+        <p class="font-bold text-gold text-sm">Hannah</p>
+        <p class="text-xs text-gray-400 mt-1">Faithful prayer warrior; mother of Samuel</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 rounded-full mx-auto mb-3 overflow-hidden">
+          <img src="https://placehold.co/80x80/4a1a6b/f0d080?text=P" alt="Priscilla" class="w-full h-full object-cover" />
+        </div>
+        <p class="font-bold text-gold text-sm">Priscilla</p>
+        <p class="text-xs text-gray-400 mt-1">Teacher and co-worker in the gospel</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     CLOSING CALL TO HONOUR
+════════════════════════════════════════════ -->
+<section class="max-w-4xl mx-auto px-6 py-20 text-center">
+  <img src="https://placehold.co/900x300/c9a84c/2c1a0e?text=Give+Her+the+Reward+She+Has+Earned"
+       alt="Honor her" class="w-full rounded-2xl shadow-xl mb-12 object-cover h-52" />
+
+  <h2 class="text-3xl md:text-4xl font-serif font-bold text-ink mb-4">
+    Give Her the Reward She Has Earned
+  </h2>
+  <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
+    Every woman who pours herself out in love — for her children, her community, her God —
+    deserves to be seen, celebrated, and honoured. Proverbs 31 is not a checklist of perfection;
+    it is a poem of praise for a life lived with purpose and faith.
+  </p>
+  <div class="verse-card max-w-xl mx-auto">
+    <p class="italic text-xl text-ink leading-relaxed">
+      "Let her works bring her praise at the city gate."
+      <span class="block mt-2 font-bold not-italic text-gold-dark text-sm">— Proverbs 31:31</span>
+    </p>
+  </div>
+
+  <div class="mt-10 flex flex-wrap justify-center gap-3">
+    <span class="role-badge">Mother</span>
+    <span class="role-badge">Daughter</span>
+    <span class="role-badge">Sister</span>
+    <span class="role-badge">Leader</span>
+    <span class="role-badge">Friend</span>
+    <span class="role-badge">Wife</span>
+    <span class="role-badge">Provider</span>
+    <span class="role-badge">Warrior of Faith</span>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="bg-ink text-gray-500 text-center py-8 text-sm">
+  <p class="text-gold-light font-serif text-base mb-1">Proverbs 31 — A Celebration of Women</p>
+  <p>All scripture references are from the <abbr title="New International Version">NIV</abbr>
+     unless otherwise noted.</p>
+  <p class="mt-2 text-xs">"She is worth far more than rubies." — Proverbs 31:10</p>
+</footer>
+
+</body>
+</html>
